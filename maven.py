@@ -1,0 +1,11 @@
+import pandas as pd
+df = pd.read_excel("Bank_Churn_Messy.xlsx")
+DF = pd.read_csv("Bank_Churn.csv")
+df.dropna(inplace=True)
+print(df.isna().sum())
+DF.dropna(inplace=True)
+print(DF.isna().sum())
+dataframe = pd.read_csv("Bank_Churn_Data_Dictionary.csv")
+dataframe.dropna(inplace=True)
+print(dataframe.isna().sum())
+print(dataframe.info())
