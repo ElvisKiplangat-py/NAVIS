@@ -9,4 +9,6 @@ DataFrame = pd.read_csv("Bank_Churn.csv")
 for data in[df, DF, DataFrame]:
     data.dropna(inplace = True)
     print(data.isna().sum())
+    data.drop_duplicates(inplace = True)
     print(data.info())
+    
