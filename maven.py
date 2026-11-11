@@ -1,11 +1,12 @@
 import pandas as pd
-df = pd.read_excel("Bank_Churn_Messy.xlsx")
-DF = pd.read_csv("Bank_Churn.csv")
-df.dropna(inplace=True)
-print(df.isna().sum())
-DF.dropna(inplace=True)
-print(DF.isna().sum())
-dataframe = pd.read_csv("Bank_Churn_Data_Dictionary.csv")
-dataframe.dropna(inplace=True)
-print(dataframe.isna().sum())
-print(dataframe.info())
+
+# Load datasets
+df = pd.read_csv("Bank_Churn_Data_Dictionary.csv")
+DF = pd.read_excel("Bank_Churn_Messy.xlsx")
+DataFrame = pd.read_csv("Bank_Churn.csv")
+
+#Remove missing values and inspect datasets
+for data in[df, DF, DataFrame]:
+    data.dropna(inplace = True)
+    print(data.isna().sum())
+    print(data.info())
